@@ -20,8 +20,9 @@ separator_block_width=15
 markup=none
 
 [ssid]
-color=#00ff00
-command=iwconfig $INTERFACE | grep ESSID | awk '{print $4, $5, $6, $7}' | tr -d 'ESSID:"'
+color=#6a6a6a
+label= 
+command=iwconfig $INTERFACE | grep ESSID | awk '{print $4}' | tr -d 'ESSID:"'
 interval=5
 separator=false
 
@@ -37,21 +38,21 @@ separator=true
 #interval=1
 
 [memory]
-label=
-separator=true
+label=
+interval=5
+separator=false
+
+[memory]
+label=
+instance=swap
+separator=false
 interval=5
 
 [cpu_usage]
-label=
+label=
 interval=5
 #min_width=CPU:100.00%
 separator=true
-
-#[memory]
-#label=
-#instance=swap
-#separator=true
-#interval=30
 
 [volume]
 #label=VOL
